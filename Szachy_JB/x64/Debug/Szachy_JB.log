@@ -1,11 +1,12 @@
-﻿  Szachy_JB.cpp
-C:\Users\Arkadiusz\source\repos\Chess\Szachy_JB\Szachy_JB.cpp(1282,22): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\Arkadiusz\source\repos\Chess\Szachy_JB\Szachy_JB.cpp(1647,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-C:\Users\Arkadiusz\source\repos\Chess\Szachy_JB\Szachy_JB.cpp(1640,16): warning C4101: 'y1': unreferenced local variable
-C:\Users\Arkadiusz\source\repos\Chess\Szachy_JB\Szachy_JB.cpp(1640,12): warning C4101: 'x1': unreferenced local variable
-C:\Users\Arkadiusz\source\repos\Chess\Szachy_JB\Szachy_JB.cpp(1641,7): warning C4101: 'cy': unreferenced local variable
-C:\Users\Arkadiusz\source\repos\Chess\Szachy_JB\Szachy_JB.cpp(1641,11): warning C4101: 'cy1': unreferenced local variable
-C:\Users\Arkadiusz\source\repos\Chess\Szachy_JB\Szachy_JB.cpp(1640,9): warning C4101: 'y': unreferenced local variable
-C:\Users\Arkadiusz\source\repos\Chess\Szachy_JB\Szachy_JB.cpp(1640,6): warning C4101: 'x': unreferenced local variable
-C:\Users\Arkadiusz\source\repos\Chess\Szachy_JB\Szachy_JB.cpp(1015): warning C4715: 'Player::getPawnY': not all control paths return a value
-  Szachy_JB.vcxproj -> C:\Users\Arkadiusz\source\repos\Chess\x64\Debug\Szachy_JB.exe
+﻿  Board.cpp
+Constants.obj : error LNK2005: "void __cdecl p(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >)" (?p@@YAXV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z) already defined in Board.obj
+Constants.obj : error LNK2005: "bool SILENT" (?SILENT@@3_NA) already defined in Board.obj
+Piece.obj : error LNK2005: "void __cdecl p(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >)" (?p@@YAXV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z) already defined in Board.obj
+Piece.obj : error LNK2005: "bool SILENT" (?SILENT@@3_NA) already defined in Board.obj
+Player.obj : error LNK2005: "void __cdecl p(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >)" (?p@@YAXV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z) already defined in Board.obj
+Player.obj : error LNK2005: "bool SILENT" (?SILENT@@3_NA) already defined in Board.obj
+Square.obj : error LNK2005: "void __cdecl p(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >)" (?p@@YAXV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z) already defined in Board.obj
+Square.obj : error LNK2005: "bool SILENT" (?SILENT@@3_NA) already defined in Board.obj
+Szachy_JB.obj : error LNK2005: "void __cdecl p(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >)" (?p@@YAXV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z) already defined in Board.obj
+Szachy_JB.obj : error LNK2005: "bool SILENT" (?SILENT@@3_NA) already defined in Board.obj
+C:\Users\Arkadiusz\source\repos\Chess\x64\Debug\Szachy_JB.exe : fatal error LNK1169: one or more multiply defined symbols found

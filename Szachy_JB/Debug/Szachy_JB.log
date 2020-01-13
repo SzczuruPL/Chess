@@ -1,0 +1,13 @@
+﻿  Szachy_JB.cpp
+C:\Users\kubos\source\repos\Chess\Szachy_JB\Szachy_JB.cpp(975,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\kubos\source\repos\Chess\Szachy_JB\Szachy_JB.cpp(1140,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\kubos\source\repos\Chess\Szachy_JB\Szachy_JB.cpp(1357,8): warning C4834: discarding return value of function with 'nodiscard' attribute
+C:\Users\kubos\source\repos\Chess\Szachy_JB\Szachy_JB.cpp(1647,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\kubos\source\repos\Chess\Szachy_JB\Szachy_JB.cpp(1640,16): warning C4101: 'y1': unreferenced local variable
+C:\Users\kubos\source\repos\Chess\Szachy_JB\Szachy_JB.cpp(1640,12): warning C4101: 'x1': unreferenced local variable
+C:\Users\kubos\source\repos\Chess\Szachy_JB\Szachy_JB.cpp(1641,7): warning C4101: 'cy': unreferenced local variable
+C:\Users\kubos\source\repos\Chess\Szachy_JB\Szachy_JB.cpp(1641,11): warning C4101: 'cy1': unreferenced local variable
+C:\Users\kubos\source\repos\Chess\Szachy_JB\Szachy_JB.cpp(1640,9): warning C4101: 'y': unreferenced local variable
+C:\Users\kubos\source\repos\Chess\Szachy_JB\Szachy_JB.cpp(1640,6): warning C4101: 'x': unreferenced local variable
+C:\Users\kubos\source\repos\Chess\Szachy_JB\Szachy_JB.cpp(1015): warning C4715: 'Player::getPawnY': not all control paths return a value
+  Szachy_JB.vcxproj -> C:\Users\kubos\source\repos\Chess\Debug\Szachy_JB.exe

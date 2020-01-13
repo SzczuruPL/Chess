@@ -1605,7 +1605,7 @@ moveStruct move(std::string token, Color color, Player player)
 void sim(Player& white_player, Player& black_player, Board& board)
 {
 	std::ifstream inFile;
-	inFile.open("C:\\Users\\Arkadiusz\\Desktop\\test3.txt");
+	inFile.open("test3.txt");
 
 	if (!inFile.good())
 	{

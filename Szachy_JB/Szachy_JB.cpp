@@ -44,7 +44,7 @@ void structConv(moveStruct str, moveConv& strc)
 	strc.y1 = 8 - (str.y1 - '0');
 	//std::cout << strc.x << '-' << strc.y << ' ' << strc.x1 << '-' << strc.y1 << std::endl;
 }
-moveStruct move(std::string token, Color color, Player player)
+moveStruct move(std::string token, short color, Player player)
 {
 	moveStruct ret;
 	std::cout << token << ' ' << color << std::endl;
@@ -58,7 +58,7 @@ moveStruct move(std::string token, Color color, Player player)
 	}
 	if (token == "O-O-O")
 	{
-		//if (color == WHITE)
+		//if (color == Col::WHITE)
 		//{
 			//king
 			//x='E'
@@ -88,7 +88,7 @@ moveStruct move(std::string token, Color color, Player player)
 	}
 	else if (token == "O-O")
 	{
-		//if (color == WHITE)
+		//if (color == Col::WHITE)
 		//{
 			//king
 			//x='E'
@@ -405,9 +405,18 @@ void sim(Player& white_player, Player& black_player, Board& board)
 
 	inFile.close();
 }
+bool SILENT;
+short BLACK;
+short WHITE;
+
 int main()
 {/*
 	p("main");*/
+	SILENT = 0;
+	WHITE = 0;
+	BLACK= 1;
+
+
 	Temp temp;
 	temp.print();
 	int x, y, x1, y1;
@@ -466,7 +475,7 @@ int main()
 	//        {
 	//            if(white.isChecked())
 	//            {
-	//                std::cout << "Winner is BLACK!" << std::endl;
+	//                std::cout << "Winner is Col::BLACK!" << std::endl;
 	//                return 0;
 	//            }
 	//            else
@@ -502,7 +511,7 @@ int main()
 	//        {
 	//            if(black.isChecked())
 	//            {
-	//                std::cout << "Winner is WHITE!" << std::endl;
+	//                std::cout << "Winner is Col::WHITE!" << std::endl;
 	//                return 0;
 	//            }
 	//            else

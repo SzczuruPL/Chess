@@ -6,7 +6,7 @@
 #include <iostream>
 #include <vector>
 
-Piece::Piece(Color color)
+Piece::Piece(short color)
 {
 	this->color = color;
 }
@@ -17,7 +17,7 @@ void Piece::print()
 	else
 		std::cout << 'W' << sign;
 }
-Color Piece::getcolor()
+short Piece::getcolorPiece()
 {
 	return color;
 }
@@ -45,7 +45,7 @@ void Piece::setBoard(Board* board)
 {
 	this->board = board;
 }
-Pawn::Pawn(Color color) :Piece(color)
+Pawn::Pawn(short color) :Piece(color)
 {
 	sign = 'P';
 }
@@ -203,7 +203,7 @@ bool Pawn::capture(int x, int y, int x1, int y1)
 		}
 	}
 }
-Knight::Knight(Color color) :Piece(color)
+Knight::Knight(short color) :Piece(color)
 {
 	sign = 'N';
 }
@@ -240,7 +240,7 @@ bool Knight::capture(int x, int y, int x1, int y1)
 {
 	return move(x, y, x1, y1);
 }
-Rook::Rook(Color color) :Piece(color)
+Rook::Rook(short color) :Piece(color)
 {
 	moved = false;
 	sign = 'R';
@@ -330,7 +330,7 @@ bool Rook::capture(int x, int y, int x1, int y1)
 {
 	return move(x, y, x1, y1);
 }
-Bishop::Bishop(Color color) :Piece(color)
+Bishop::Bishop(short color) :Piece(color)
 {
 	sign = 'B';
 }
@@ -410,7 +410,7 @@ bool Bishop::capture(int x, int y, int x1, int y1)
 	return move(x, y, x1, y1);
 
 }
-King::King(Color color) :Piece(color)
+King::King(short color) :Piece(color)
 {
 	moved = false;
 	sign = 'K';
@@ -477,7 +477,7 @@ bool King::capture(int x, int y, int x1, int y1)
 {
 	return move(x, y, x1, y1);
 }
-Queen::Queen(Color color) :Piece(color)
+Queen::Queen(short color) :Piece(color)
 {
 	sign = 'Q';
 }

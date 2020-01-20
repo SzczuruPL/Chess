@@ -6,7 +6,7 @@
 #include <iostream>
 #include <vector>
 
-Player::Player(Color color, Board* board)
+Player::Player(short color, Board* board)
 {
 	this->board = board;
 	this->color = color;
@@ -268,7 +268,7 @@ bool Player::checkMove(int x, int y, int x1, int y1, bool captureMove)
 		//std::cout << "halo" << std::endl;
 		return false;
 	}
-	else if (color != board->getcolor(x, y))
+	else if (color != board->getcolorBoard(x, y))
 	{
 		//std::cout << "Chosen piece belongs to opponent!" << std::endl;
 		return false;
@@ -297,7 +297,7 @@ bool Player::checkMove(int x, int y, int x1, int y1, bool captureMove)
 			return false;
 		}
 	}
-	else if (board->getcolor(x1, y1) != board->getcolor(x, y))
+	else if (board->getcolorBoard(x1, y1) != board->getcolorBoard(x, y))
 	{
 		SILENT = 1;
 		bool rtn = board->capture(x, y, x1, y1);
@@ -326,7 +326,7 @@ bool Player::move(int x, int y, int x1, int y1)
 			std::cout << "Square out of range!" << std::endl;
 		return false;
 	}
-	else if (color != board->getcolor(x, y))
+	else if (color != board->getcolorBoard(x, y))
 	{
 		if (!SILENT)
 			std::cout << "Chosen piece belongs to opponent!" << std::endl;
@@ -345,7 +345,7 @@ bool Player::move(int x, int y, int x1, int y1)
 		else
 			return rtn;
 	}
-	else if (board->getcolor(x1, y1) != board->getcolor(x, y))
+	else if (board->getcolorBoard(x1, y1) != board->getcolorBoard(x, y))
 	{
 		return board->capture(x, y, x1, y1);
 	}

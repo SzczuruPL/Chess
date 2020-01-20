@@ -17,9 +17,9 @@ bool Square::isempty()
 {
 	return piece == NULL;
 }
-Color Square::getcolor()
+short Square::getcolorSquare()
 {
-	return piece->getcolor();
+	return piece->getcolorPiece();
 }
 Piece* Square::getpiece()
 {

@@ -1,9 +1,10 @@
+#include <iostream>
 #include "Player.h"
 #include "Board.h"
 #include "Piece.h"
 #include "Square.h"
 #include "Constants.h"
-#include <iostream>
+
 
 Board::Board()
 {
@@ -23,9 +24,9 @@ bool Board::isempty(int x, int y)
 {
 	return arr[x][y].isempty();
 }
-Color Board::getcolor(int x, int y)
+short Board::getcolorBoard(int x, int y)
 {
-	return arr[x][y].getcolor();
+	return arr[x][y].getcolorSquare();
 }
 
 bool Board::forcedMove(int x, int y, int x1, int y1)

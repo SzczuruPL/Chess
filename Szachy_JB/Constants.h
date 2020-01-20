@@ -1,10 +1,12 @@
 #pragma once
 #include <string>
 #include <iostream>
-
-void p(std::string s)
-{
-	std::cout << s << std::endl;
-}
-
-bool SILENT = 0;
+extern bool SILENT;
+extern short WHITE;
+extern short BLACK;
+//void p(std::string s)
+//{
+//	std::cout << s << std::endl;
+//}
+//
+//

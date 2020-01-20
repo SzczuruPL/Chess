@@ -1,4 +1,6 @@
 #pragma once
+
+
 #include "Player.h"
 #include "Square.h"
 #include "Constants.h"
@@ -6,24 +8,26 @@
 #include <vector>
 
 class Board;
-enum Color
-{
-	BLACK, WHITE
-};
+
+//enum short
+//{
+//	BLACK, WHITE
+//};
+
 class Piece
 {
 protected:
 	bool isCaptured;
-	Color color;
+	short color;
 	Board* board;
 	//void move();
 	//void caputure();
 	char sign;
 	int x, y;
 public:
-	Piece(Color color);
+	Piece(short color);
 	void print();
-	Color getcolor();
+	short getcolorPiece();
 	int getX();
 	void setX(int x);
 	int getY();
@@ -38,7 +42,7 @@ public:
 class Pawn :public Piece
 {
 public:
-	Pawn(Color color);
+	Pawn(short color);
 	std::vector <std::pair <int, int> > getMoves(bool captureMove);
 	bool move(int x, int y, int x1, int y1);
 	bool capture(int x, int y, int x1, int y1);
@@ -46,7 +50,7 @@ public:
 class Knight :public Piece
 {
 public:
-	Knight(Color color);
+	Knight(short color);
 	std::vector <std::pair <int, int> > getMoves(bool captureMove);
 	bool move(int x, int y, int x1, int y1);
 	bool capture(int x, int y, int x1, int y1);
@@ -56,7 +60,7 @@ class Rook :public Piece
 private:
 	bool moved;
 public:
-	Rook(Color color);
+	Rook(short color);
 	std::vector <std::pair <int, int> > getMoves(bool captureMove);
 	bool wasMoved();
 	bool move(int x, int y, int x1, int y1);
@@ -65,7 +69,7 @@ public:
 class Bishop :public Piece
 {
 public:
-	Bishop(Color color);
+	Bishop(short color);
 	std::vector <std::pair <int, int> > getMoves(bool captureMove);
 	bool move(int x, int y, int x1, int y1);
 	bool capture(int x, int y, int x1, int y1);
@@ -76,7 +80,7 @@ private:
 	bool moved;
 	bool castle(int x, int y, int x1, int y1);
 public:
-	King(Color color);
+	King(short color);
 	std::vector <std::pair <int, int> > getMoves(bool captureMove);
 	//    bool isChecked;
 	bool wasMoved();
@@ -86,7 +90,7 @@ public:
 class Queen :public Piece
 {
 public:
-	Queen(Color color);
+	Queen(short color);
 	std::vector <std::pair <int, int> > getMoves(bool captureMove);
 	bool move(int x, int y, int x1, int y1);
 	bool capture(int x, int y, int x1, int y1);

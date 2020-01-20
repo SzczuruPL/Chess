@@ -389,6 +389,7 @@ void sim(Player& white_player, Player& black_player, Board& board)
 		inFile >> num >> white >> black;
 		if (num == "1-0" or num == "1/2-1/2" or num == "0-1")
 			break;
+		std::cout << num << std::endl;
 		moveConv strc;
 		moveStruct str = move(white, WHITE, white_player);
 		structConv(str, strc);

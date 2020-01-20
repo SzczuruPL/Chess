@@ -1,6 +1,4 @@
 #pragma once
-
-
 #include "Player.h"
 #include "Square.h"
 #include "Constants.h"
@@ -13,6 +11,8 @@ class Board;
 //{
 //	BLACK, WHITE
 //};
+
+//git testv 2
 
 class Piece
 {

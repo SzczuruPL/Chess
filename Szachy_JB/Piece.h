@@ -5,12 +5,11 @@
 #include <iostream>
 #include <vector>
 
-class Board;
-
-//enum short
+//enum Color
 //{
 //	BLACK, WHITE
 //};
+class Board;
 
 //git testv 2 
 
@@ -18,16 +17,16 @@ class Piece
 {
 protected:
 	bool isCaptured;
-	short color;
+	Color color;
 	Board* board;
 	//void move();
 	//void caputure();
 	char sign;
 	int x, y;
 public:
-	Piece(short color);
+	Piece(Color color);
 	void print();
-	short getcolorPiece();
+	Color getcolorPiece();
 	int getX();
 	void setX(int x);
 	int getY();
@@ -42,7 +41,7 @@ public:
 class Pawn :public Piece
 {
 public:
-	Pawn(short color);
+	Pawn(Color color);
 	std::vector <std::pair <int, int> > getMoves(bool captureMove);
 	bool move(int x, int y, int x1, int y1);
 	bool capture(int x, int y, int x1, int y1);
@@ -50,7 +49,7 @@ public:
 class Knight :public Piece
 {
 public:
-	Knight(short color);
+	Knight(Color color);
 	std::vector <std::pair <int, int> > getMoves(bool captureMove);
 	bool move(int x, int y, int x1, int y1);
 	bool capture(int x, int y, int x1, int y1);
@@ -60,7 +59,7 @@ class Rook :public Piece
 private:
 	bool moved;
 public:
-	Rook(short color);
+	Rook(Color color);
 	std::vector <std::pair <int, int> > getMoves(bool captureMove);
 	bool wasMoved();
 	bool move(int x, int y, int x1, int y1);
@@ -69,7 +68,7 @@ public:
 class Bishop :public Piece
 {
 public:
-	Bishop(short color);
+	Bishop(Color color);
 	std::vector <std::pair <int, int> > getMoves(bool captureMove);
 	bool move(int x, int y, int x1, int y1);
 	bool capture(int x, int y, int x1, int y1);
@@ -80,7 +79,7 @@ private:
 	bool moved;
 	bool castle(int x, int y, int x1, int y1);
 public:
-	King(short color);
+	King(Color color);
 	std::vector <std::pair <int, int> > getMoves(bool captureMove);
 	//    bool isChecked;
 	bool wasMoved();
@@ -90,7 +89,7 @@ public:
 class Queen :public Piece
 {
 public:
-	Queen(short color);
+	Queen(Color color);
 	std::vector <std::pair <int, int> > getMoves(bool captureMove);
 	bool move(int x, int y, int x1, int y1);
 	bool capture(int x, int y, int x1, int y1);

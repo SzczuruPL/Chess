@@ -7,7 +7,7 @@
 #include <vector>
 
 class Piece;
-//enum short;
+//enum Color;
 class Square
 {
 	int x;
@@ -17,7 +17,7 @@ public:
 	Square();
 	void setpiece(Piece* piece);
 	bool isempty();
-	short getcolorSquare();
+	Color getcolorSquare();
 	Piece* getpiece();
 	bool move(int x1, int y1);
 	bool capture(int x1, int y1);

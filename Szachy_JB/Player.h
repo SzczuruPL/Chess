@@ -8,12 +8,12 @@
 
 class Player
 {
-	short color;
+	Color color;
 	Board* board;
 	Player* opponent;
 	std::vector <Piece*> pieces;
 public:
-	Player(short color, Board* board);
+	Player(Color color, Board* board);
 	std::vector <Piece*> getPieces();
 	Piece* getKing();
 	char getPawnY(char x1, char y1);

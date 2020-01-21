@@ -24,7 +24,7 @@ bool Board::isempty(int x, int y)
 {
 	return arr[x][y].isempty();
 }
-short Board::getcolorBoard(int x, int y)
+Color Board::getcolorBoard(int x, int y)
 {
 	return arr[x][y].getcolorSquare();
 }

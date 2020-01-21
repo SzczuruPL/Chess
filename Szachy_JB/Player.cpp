@@ -6,7 +6,7 @@
 #include <iostream>
 #include <vector>
 
-Player::Player(short color, Board* board)
+Player::Player(Color color, Board* board)
 {
 	this->board = board;
 	this->color = color;

@@ -37,17 +37,15 @@ struct moveConv
 };
 void structConv(moveStruct str, moveConv& strc)
 {
-	std::cout << str.x << str.y << ' ' << str.x1 << str.y1 << std::endl;
+	//std::cout << str.x << str.y << ' ' << str.x1 << str.y1 << std::endl;
 	strc.x = str.x - 'A';
 	strc.x1 = str.x1 - 'A';
 	strc.y = 8 - (str.y - '0');
 	strc.y1 = 8 - (str.y1 - '0');
-	std::cout << strc.x << '-' << strc.y << ' ' << strc.x1 << '-' << strc.y1 << std::endl;
+	//std::cout << strc.x << '-' << strc.y << ' ' << strc.x1 << '-' << strc.y1 << std::endl;
 }
 moveStruct move(std::string token, Color color, Player player)
 {
-	moveConv strc;
-	moveStruct str;
 	moveStruct ret;
 	std::cout << token << ' ' << color << std::endl;
 	char x, x1, y, y1;
@@ -60,70 +58,62 @@ moveStruct move(std::string token, Color color, Player player)
 	}
 	if (token == "O-O-O")
 	{
-		if (color == WHITE)
-		{
+		//if (color == Col::WHITE)
+		//{
 			//king
-			str.x = 'E';
-			str.y = '1';
-			str.x1 = 'C';
-			str.y1 = '1';
-			structConv(str, strc);
-			player.forcedMove(strc.y, strc.x, strc.y1, strc.x1);
+			//x='E'
+			//y=1
+			//x1='C'
+			//y1=1
 			//rook
-			ret.x = 'A';
-			ret.y = '1';
-			ret.x1 = 'D';
-			ret.y1 = '1';
-		}
-		else
-		{
+			//x='A'
+			//y=1
+			//x1='D'
+			//y=1
+		//}
+		//else
+		//{
 			//king
-			str.x = 'E';
-			str.y = '8';
-			str.x1 = 'C';
-			str.y1 = '8';
-			structConv(str, strc);
-			player.forcedMove(strc.y, strc.x, strc.y1, strc.x1);
+			//x='E'
+			//y=8
+			//x1='C'
+			//y1=8
 			//rook
-			ret.x = 'A';
-			ret.y = '8';
-			ret.x1 = 'D';
-			ret.y1 = '8';
-		}
+			//x='A'
+			//y=8
+			//x1='D'
+			//y=8
+		//}
 		std::cout << "Readmove->CastlingLong" << std::endl;
 	}
 	else if (token == "O-O")
 	{
-		if (color == WHITE)
-		{
+		//if (color == Col::WHITE)
+		//{
 			//king
-			str.x = 'E';
-			str.y = '1';
-			str.x1 = 'G';
-			str.y1 = '1';
-			structConv(str, strc);
-			player.forcedMove(strc.y, strc.x, strc.y1, strc.x1);
+			//x='E'
+			//y=1
+			//x1='G'
+			//y1=1
 			//rook
-			ret.x = 'H';
-			ret.y = '1';
-			ret.x1 = 'F';
-			ret.y1 = '1';
-		}
-		else
-		{
+			//x='H'
+			//y=1
+			//x1='F'
+			//y=1
+		//}
+		//else
+		//{
 			//king
-			str.x = 'E';
-			str.y = '8';
-			str.x1 = 'G';
-			str.y1 = '8';
-			structConv(str, strc);
-			player.forcedMove(strc.y, strc.x, strc.y1, strc.x1);
+			//x='E'
+			//y=8
+			//x1='G'
+			//y1=8
 			//rook
-			ret.x = 'H';
-			ret.y = '8';
-			ret.x1 = 'F';
-			ret.y1 = '8';
-		}
+			//x='H'
+			//y=8
+			//x1='F'
+			//y=8
+		//}
 		std::cout << "Readmove->CastlingShort" << std::endl;
 	}
 	else if (token[1] == 'x')
@@ -348,7 +338,7 @@ moveStruct move(std::string token, Color color, Player player)
 		}
 		else
 		{
-			//std::cout << "Co chlop z figura robi" << std::endl;
+			std::cout << "Co chlop z figura robi" << std::endl;
 		}
 	}
 	else

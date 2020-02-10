@@ -1,10 +1,17 @@
-﻿  Szachy_JB.cpp
-C:\Users\Arkadiusz\source\repos\Chess\Szachy_JB\Szachy_JB.cpp(55,22): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\Arkadiusz\source\repos\Chess\Szachy_JB\Szachy_JB.cpp(440,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-C:\Users\Arkadiusz\source\repos\Chess\Szachy_JB\Szachy_JB.cpp(433,16): warning C4101: 'y1': unreferenced local variable
-C:\Users\Arkadiusz\source\repos\Chess\Szachy_JB\Szachy_JB.cpp(433,12): warning C4101: 'x1': unreferenced local variable
-C:\Users\Arkadiusz\source\repos\Chess\Szachy_JB\Szachy_JB.cpp(434,7): warning C4101: 'cy': unreferenced local variable
-C:\Users\Arkadiusz\source\repos\Chess\Szachy_JB\Szachy_JB.cpp(434,11): warning C4101: 'cy1': unreferenced local variable
-C:\Users\Arkadiusz\source\repos\Chess\Szachy_JB\Szachy_JB.cpp(433,9): warning C4101: 'y': unreferenced local variable
-C:\Users\Arkadiusz\source\repos\Chess\Szachy_JB\Szachy_JB.cpp(433,6): warning C4101: 'x': unreferenced local variable
+﻿  Board.cpp
+  Constants.cpp
+  Piece.cpp
+  Player.cpp
+  Square.cpp
+  Szachy_JB.cpp
+C:\Users\Arkadiusz\source\repos\Chess\Szachy_JB\Szachy_JB.cpp(53,22): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Arkadiusz\source\repos\Chess\Szachy_JB\Szachy_JB.cpp(430,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\Arkadiusz\source\repos\Chess\Szachy_JB\Szachy_JB.cpp(423,16): warning C4101: 'y1': unreferenced local variable
+C:\Users\Arkadiusz\source\repos\Chess\Szachy_JB\Szachy_JB.cpp(423,12): warning C4101: 'x1': unreferenced local variable
+C:\Users\Arkadiusz\source\repos\Chess\Szachy_JB\Szachy_JB.cpp(424,7): warning C4101: 'cy': unreferenced local variable
+C:\Users\Arkadiusz\source\repos\Chess\Szachy_JB\Szachy_JB.cpp(424,11): warning C4101: 'cy1': unreferenced local variable
+C:\Users\Arkadiusz\source\repos\Chess\Szachy_JB\Szachy_JB.cpp(423,9): warning C4101: 'y': unreferenced local variable
+  Generating Code...
+C:\Users\Arkadiusz\source\repos\Chess\Szachy_JB\Szachy_JB.cpp(423,6): warning C4101: 'x': unreferenced local variable
+C:\Users\Arkadiusz\source\repos\Chess\Szachy_JB\Player.cpp(122): warning C4715: 'Player::getPawnY': not all control paths return a value
   Szachy_JB.vcxproj -> C:\Users\Arkadiusz\source\repos\Chess\x64\Debug\Szachy_JB.exe

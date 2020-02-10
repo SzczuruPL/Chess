@@ -82,7 +82,7 @@ moveStruct move(std::string token, Color color, Player player)
 			//x='A'
 			//y=8
 			//x1='D'
-			//y=8
+			//y=8 lol
 		//}
 		std::cout << "Readmove->CastlingLong" << std::endl;
 	}

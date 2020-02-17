@@ -33,6 +33,7 @@ bool Board::forcedMove(int x, int y, int x1, int y1)
 {
 	//std::cout << arr[x][y].getpiece()->getSign() << ": " << char(y+65} << x+1 << '-' << char(y1+65} << x1+1 << std::endl;
 	arr[x1][y1].setpiece(arr[x][y].getpiece());
+	arr[x1][y1].getpiece()->kill();
 	arr[x1][y1].setCorPiece(x1, y1);
 	arr[x][y].setpiece(NULL);
 
@@ -59,6 +60,7 @@ bool Board::capture(int x, int y, int x1, int y1)
 		std::cout << arr[x][y].getpiece()->getSign() << "x: " << char(y + 65) << 8 - x << '-' << char(y1 + 65) << 8 - x1 << std::endl;
 		//Sleep(2500);
 		arr[x1][y1].setpiece(arr[x][y].getpiece());
+		arr[x1][y1].getpiece()->kill();
 		arr[x1][y1].setCorPiece(x1, y1);
 		arr[x][y].setpiece(NULL);
 		return true;

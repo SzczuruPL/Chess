@@ -17,6 +17,7 @@ class Piece
 {
 protected:
 	bool isCaptured;
+	bool isAlive;
 	Color color;
 	Board* board;
 	//void move();
@@ -32,7 +33,9 @@ public:
 	int getY();
 	void setY(int y);
 	char getSign();
+	void kill();
 	void setBoard(Board* board);
+	bool getAlive();
 	virtual std::vector <std::pair <int, int> > getMoves(bool captureMove) = 0;
 	virtual bool move(int x, int y, int x1, int y1) = 0;
 	virtual bool capture(int x, int y, int x1, int y1) = 0;

@@ -424,6 +424,7 @@ int main()
 {/*
 	p("main");*/
 	SILENT = 0;
+	//DEAD = 50;
 	//WHITE = 0;
 	//BLACK= 1;
 

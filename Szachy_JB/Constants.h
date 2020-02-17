@@ -2,6 +2,7 @@
 #include <string>
 #include <iostream>
 extern bool SILENT;
+extern int DEAD;
 //extern Color WHITE;
 //extern Color BLACK;
 

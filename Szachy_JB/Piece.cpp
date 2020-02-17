@@ -45,6 +45,16 @@ void Piece::setBoard(Board* board)
 {
 	this->board = board;
 }
+void Piece::kill()
+{
+	//isAlive=0;
+	x = 50;//DEAD;
+	y = 50;//DEAD;
+}
+bool Piece::getAlive()
+{
+	return isAlive;
+}
 Pawn::Pawn(Color color) :Piece(color)
 {
 	sign = 'P';

@@ -32,8 +32,9 @@ Color Board::getcolorBoard(int x, int y)
 bool Board::forcedMove(int x, int y, int x1, int y1)
 {
 	//std::cout << arr[x][y].getpiece()->getSign() << ": " << char(y+65} << x+1 << '-' << char(y1+65} << x1+1 << std::endl;
+	if(!arr[x1][y1].isempty())
+		arr[x1][y1].getpiece()->kill();
 	arr[x1][y1].setpiece(arr[x][y].getpiece());
-	arr[x1][y1].getpiece()->kill();
 	arr[x1][y1].setCorPiece(x1, y1);
 	arr[x][y].setpiece(NULL);
 

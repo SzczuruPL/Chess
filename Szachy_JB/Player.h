@@ -30,6 +30,7 @@ public:
 	void setOpponent(Player* opponent);
 	bool isNoMove();
 	bool isChecked();
+	Board* getBoard();
 	void print();
 	bool forcedMove(int x, int y, int x1, int y1);
 	bool checkMove(int x, int y, int x1, int y1, bool captureMove);

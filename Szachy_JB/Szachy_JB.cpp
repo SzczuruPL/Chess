@@ -44,6 +44,40 @@ void structConv(moveStruct str, moveConv& strc)
 	strc.y1 = 8 - (str.y1 - '0');
 	std::cout << strc.x << '-' << strc.y << ' ' << strc.x1 << '-' << strc.y1 << std::endl;
 }
+bool rookTracing(char x, char y, char x1, char y1, Player player)
+{
+	if (x == x1)
+	{
+		if (y1 < y)
+		{
+			char temp = y1;
+			y1 = y;
+			y = temp;
+		}
+		for (int i = y+1;i < y1;i++)
+		{
+			if (player.getBoard()->isempty(x, i))
+				return false;
+			
+		}
+	}
+	else
+	{
+		if (x1 < x)
+		{
+			char temp = x1;
+			x1 = x;
+			x = temp;
+		}
+		for (int i = x + 1;i < x1;i++)
+		{
+			if (player.getBoard()->isempty(i, y))
+				return false;
+
+		}
+	}
+	return true;
+}
 moveStruct move(std::string token, Color color, Player player)
 {
 	moveConv strc;
@@ -143,7 +177,7 @@ moveStruct move(std::string token, Color color, Player player)
 				x = token[1] - 32;
 				x1 = token[2] - 32;
 				y1 = token[3];
-				if (player.getRookY(0) == y1)
+				if (player.getRookX(0) == x)
 				{
 					ret.x = x;
 					ret.y = player.getRookY(0);
@@ -164,7 +198,7 @@ moveStruct move(std::string token, Color color, Player player)
 				y = token[1];
 				x1 = token[2] - 32;
 				y1 = token[3];
-				if (player.getRookX(0) == x1)
+				if (player.getRookY(0) == y)
 				{
 					ret.x = player.getRookX(0);
 					ret.y = y;
@@ -183,7 +217,7 @@ moveStruct move(std::string token, Color color, Player player)
 			{
 				x1 = token[1] - 32;
 				y1 = token[2];
-				if (player.getRookX(0) == x1 or player.getRookY(0) == y1)
+				if (rookTracing(player.getRookX(0), player.getRookY(0),x1,y1,player) and (player.getRookX(0) == x1 or player.getRookY(0) == y1))
 				{
 					ret.x = player.getRookX(0);
 					ret.y = player.getRookY(0);
@@ -201,65 +235,21 @@ moveStruct move(std::string token, Color color, Player player)
 		}
 		else if (figure == 'B')
 		{
-			if (token[1] >= 'a' && token[1] <= 'h' && token[2] >= 'a' && token[2] <= 'h') //to jest okej
+			x1 = token[1] - 32;
+			y1 = token[2];
+			if (player.getBishopX(0) + player.getBishopY(0) == x1 + y1 or player.getBishopX(0) - player.getBishopY(0) == x1 - y1)
 			{
-				x = token[1] - 32;
-				x1 = token[2] - 32;
-				y1 = token[3];
-				if (player.getBishopY(0) == y1)
-				{
-					ret.x = x;
-					ret.y = player.getBishopY(0);
-					ret.x1 = x1;
-					ret.y1 = y1;
-				}
-				else
-				{
-					ret.x = x;
-					ret.y = player.getBishopY(1);
-					ret.x1 = x1;
-					ret.y1 = y1;
-
-				}
-			}
-			else if (token[1] >= '1' && token[1] <= '8') // to te¿
-			{
-				y = token[1];
-				x1 = token[2] - 32;
-				y1 = token[3];
-				if (player.getBishopX(0) == x1)
-				{
-					ret.x = player.getBishopX(0);
-					ret.y = y;
-					ret.x1 = x1;
-					ret.y1 = y1;
-				}
-				else
-				{
-					ret.x = player.getBishopX(1);
-					ret.y = y;
-					ret.x1 = x1;
-					ret.y1 = y1;
-				}
+				ret.x = player.getBishopX(0);
+				ret.y = player.getBishopY(0);
+				ret.x1 = x1;
+				ret.y1 = y1;
 			}
 			else
 			{
-				x1 = token[1] - 32;
-				y1 = token[2];
-				if (player.getBishopX(0) + player.getBishopY(0) == x1 + y1 or player.getBishopX(0) - player.getBishopY(0) == x1 - y1)
-				{
-					ret.x = player.getBishopX(0);
-					ret.y = player.getBishopY(0);
-					ret.x1 = x1;
-					ret.y1 = y1;
-				}
-				else
-				{
-					ret.x = player.getBishopX(1);
-					ret.y = player.getBishopY(1);
-					ret.x1 = x1;
-					ret.y1 = y1;
-				}
+				ret.x = player.getBishopX(1);
+				ret.y = player.getBishopY(1);
+				ret.x1 = x1;
+				ret.y1 = y1;
 			}
 		}
 		else if (figure == 'N')
@@ -269,7 +259,7 @@ moveStruct move(std::string token, Color color, Player player)
 				x = token[1] - 32;
 				x1 = token[2] - 32;
 				y1 = token[3];
-				if (player.getKnightY(0) == y1)
+				if (player.getKnightX(0) == x)
 				{
 					//std::cout << "Knight0" << std::endl;
 					ret.x = x;
@@ -293,7 +283,7 @@ moveStruct move(std::string token, Color color, Player player)
 				y = token[1];
 				x1 = token[2] - 32;
 				y1 = token[3];
-				if (player.getKnightX(0) == x1)
+				if (player.getKnightY(0) == y)
 				{
 					ret.x = player.getKnightX(0);
 					ret.y = y;

@@ -15,7 +15,7 @@ void Square::setpiece(Piece* piece)
 }
 bool Square::isempty()
 {
-	return piece == NULL; //polecial
+	return piece == NULL;
 }
 Color Square::getcolorSquare()
 {

@@ -238,6 +238,10 @@ bool Player::isChecked()
 	SILENT = 0;
 	return false;
 }
+Board* Player::getBoard()
+{
+	return board;
+}
 void Player::setOpponent(Player* opponent)
 {
 	this->opponent = opponent;

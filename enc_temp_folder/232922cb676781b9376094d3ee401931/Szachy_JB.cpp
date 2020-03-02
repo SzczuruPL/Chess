@@ -73,7 +73,7 @@ bool rookTracing(char x, char y, char x1, char y1, Player player)
 		{
 			std::cout << (char)i << '-' << y << std::endl;
 			std::cout << i - 'A'<< '-' << 8 - (y - '0') << std::endl;
-			if (!player.getBoard()->isempty(i-'A', 8-(y-'0'))) //wykrzyknik cos sie popsul todo: 12 ruch rook leci w kosmos
+			if (!player.getBoard()->isempty(i-'A', 8-(y-'0'))) //wykrzyknik cos sie popsul
 				return false;
 		}
 	}

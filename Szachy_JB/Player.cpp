@@ -256,7 +256,7 @@ void Player::print()
 }
 bool Player::forcedMove(int x, int y, int x1, int y1)
 {
-	//std::cout << "Forced move: " << x <<','<<y<<'-'<<x1<<','<<y1<<std::endl;
+	std::cout << "Forced move: " << x <<','<<y<<'-'<<x1<<','<<y1<<std::endl;
 	return board->forcedMove(x, y, x1, y1);
 }
 bool Player::checkMove(int x, int y, int x1, int y1, bool captureMove)

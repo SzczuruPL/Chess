@@ -55,9 +55,9 @@ bool rookTracing(char x, char y, char x1, char y1, Player player)
 			y1 = y;
 			y = temp;
 		}
-		for (int i = y+1;i < y1;i++)
+		for (int i = y + 1;i < y1;i++)
 		{
-			if (!player.getBoard()->isempty(x-'A', 8-(i-'0')))
+			if (!player.getBoard()->isempty(8 - (i - '0'), x-'A'))
 				return false;
 		}
 	}
@@ -73,7 +73,7 @@ bool rookTracing(char x, char y, char x1, char y1, Player player)
 		{
 			std::cout << (char)i << '-' << y << std::endl;
 			std::cout << i - 'A'<< '-' << 8 - (y - '0') << std::endl;
-			if (!player.getBoard()->isempty(i-'A', 8-(y-'0'))) //wykrzyknik cos sie popsul todo: 12 ruch rook leci w kosmos
+			if (!player.getBoard()->isempty(8 - (y - '0'), i-'A')) //wykrzyknik cos sie popsul todo: 12 ruch rook leci w kosmos
 				return false;
 		}
 	}
